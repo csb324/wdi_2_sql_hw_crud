@@ -2,10 +2,10 @@
 DROP DATABASE IF EXISTS bank_homework;
 
 -- Create a bank_homework database
-
+CREATE DATABASE bank_homework;
 
 -- Connect to the bank_homework databases
-
+\c bank_homework
 
 -- Create a payments table
 --  The table should have columns of id, created_at, amount, payer_name,
