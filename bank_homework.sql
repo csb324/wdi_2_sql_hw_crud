@@ -48,6 +48,10 @@ INSERT INTO payments (created_at, amount, payer_name, recipient_name, descriptio
   ('2014-05-18', 23.45, 'Bella', 'Murray', 'Bought your liver online', 22314),
   ('2014-05-18', 400.00, 'Bella', 'Jane', 'Vampire blood', 20904);
 
+INSERT INTO payments (created_at, amount, payer_name, recipient_name) VALUES
+  ('2014-05-18', 40.00, 'Bella', 'Jane'),
+  ('2014-04-10', 100.00, 'Jane', 'Clara');
+
 -- You receive notice that the payment with id of 9 is $10 too low.
 -- Alter that row so that it is corrected
 UPDATE payments SET amount = amount + 10 WHERE id = 9;
@@ -65,9 +69,9 @@ SELECT * FROM payments ORDER BY amount DESC;
 SELECT DISTINCT recipient_name FROM payments;
 
 -- In a single query, select all payments created in the past week
-
+SELECT * FROM payments WHERE created_at < current_date - integer '7';
 
 -- In a single query, select all payments with a blank description
-
+SELECT * FROM payments WHERE description IS NULL;
 
 -- In a single query, select all payments matching the name of one of the payers (choose any single one)
