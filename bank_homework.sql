@@ -56,13 +56,13 @@ UPDATE payments SET amount = amount + 10 WHERE id = 9;
 DELETE FROM payments WHERE amount < 2;
 
 -- Select all entries from the payments table
-
+SELECT * FROM payments;
 
 -- In a single query, output all payments ordered from the largest to the smallest
-
+SELECT * FROM payments ORDER BY amount DESC;
 
 -- In a single query, output the names of all distinct recipients
-
+SELECT DISTINCT recipient_name FROM payments;
 
 -- In a single query, select all payments created in the past week
 
