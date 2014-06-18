@@ -10,6 +10,14 @@ CREATE DATABASE bank_homework;
 -- Create a payments table
 --  The table should have columns of id, created_at, amount, payer_name,
 --  recipient_name, and description with the appropriate datatypes
+CREATE TABLE payments (
+  id SERIAL PRIMARY KEY,
+  created_at DATE,
+  amount NUMERIC,
+  payer_name TEXT,
+  recipient_name TEXT,
+  description TEXT
+);
 
 
 -- Alter the payments table, add the column of `zipcode`
