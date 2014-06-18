@@ -75,3 +75,6 @@ SELECT * FROM payments WHERE created_at < current_date - integer '7';
 SELECT * FROM payments WHERE description IS NULL;
 
 -- In a single query, select all payments matching the name of one of the payers (choose any single one)
+SELECT * FROM payments WHERE payer_name = 'Murray';
+
+
