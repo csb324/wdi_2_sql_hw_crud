@@ -45,16 +45,15 @@ INSERT INTO payments (created_at, amount, payer_name, recipient_name, descriptio
   ('2014-01-18', 1.00, 'Murray', 'Bella', 'A present', 22314),
   ('2014-04-18', 40.00, 'Eliza', 'Jane', 'Internet bill', 22314),
   ('2014-05-18', 6000.00, 'Bella', 'Jim', 'An old car', 22314),
-  ('2014-05-18', 23.45, 'Bella', 'Murray', 'Some very specific purchase', 22314),
+  ('2014-05-18', 23.45, 'Bella', 'Murray', 'Bought your liver online', 22314),
   ('2014-05-18', 400.00, 'Bella', 'Jane', 'Vampire blood', 20904);
-
 
 -- You receive notice that the payment with id of 9 is $10 too low.
 -- Alter that row so that it is corrected
-
+UPDATE payments SET amount = amount + 10 WHERE id = 9;
 
 -- Delete all payments with an amount under $2
-
+DELETE FROM payments WHERE amount < 2;
 
 -- Select all entries from the payments table
 
